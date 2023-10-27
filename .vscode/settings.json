@@ -1,0 +1,7 @@
+{
+    "python.analysis.extraPaths": [
+        "./src/mlProject/config/__init__.pysrc",
+        "./src/mlProject/config/__init__.pysrc",
+        "./src/mlProject/config/__init__.pysrc"
+    ]
+}
