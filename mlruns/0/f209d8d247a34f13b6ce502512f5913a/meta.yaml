@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/chaky/Desktop/data%20science/projects/end-to-end-machine-learning-project-with-MLflow/mlruns/0/f209d8d247a34f13b6ce502512f5913a/artifacts
+end_time: 1698529625715
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: f209d8d247a34f13b6ce502512f5913a
+run_name: suave-panda-438
+run_uuid: f209d8d247a34f13b6ce502512f5913a
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1698529623911
+status: 3
+tags: []
+user_id: chaky

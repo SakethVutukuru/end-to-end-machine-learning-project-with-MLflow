@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/chaky/Desktop/data%20science/projects/end-to-end-machine-learning-project-with-MLflow/mlruns/0/b3ce68d3b8ea4e6e86e08eb9099ef79d/artifacts
+end_time: 1698529210791
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: b3ce68d3b8ea4e6e86e08eb9099ef79d
+run_name: powerful-perch-435
+run_uuid: b3ce68d3b8ea4e6e86e08eb9099ef79d
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1698529208916
+status: 3
+tags: []
+user_id: chaky
