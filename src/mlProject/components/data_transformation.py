@@ -28,11 +28,11 @@ class DataTransformation:
         #test_pca = pca.transform(test_scaled)
 
         # Save the transformed data
-        train = pd.DataFrame(train_scaled)
-        test = pd.DataFrame(test_scaled)
+        train_scaled = pd.DataFrame(train_scaled)
+        test_scaled = pd.DataFrame(test_scaled)
 
-        train.to_csv(os.path.join(self.config.root_dir, "train_pca.csv"), index=False)
-        test.to_csv(os.path.join(self.config.root_dir, "test_pca.csv"), index=False)
+        train_scaled.to_csv(os.path.join(self.config.root_dir, "train.csv"), index=False)
+        test_scaled.to_csv(os.path.join(self.config.root_dir, "test.csv"), index=False)
 
         logger.info("Transformed data with StandardScaler and PCA and saved to CSV files with randomization")
         logger.info(train.shape)
