@@ -21,31 +21,55 @@ class DataTransformation:
         target_variable = 'quality'
 
         # Split the data into features (X) and the target variable (y)
-        X = data.drop(target_variable, axis=1)
-        y = data[target_variable]
+        #X = data.drop(target_variable, axis=1)
+        #y = data[target_variable]
 
         # Split the data into training and test sets with randomization (0.75, 0.25) split.
-        X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.25, random_state=42)
+        #X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.25, random_state=42)
 
         # Apply StandardScaler only to the features (X)
-        scaler = StandardScaler()
-        X_train_scaled = scaler.transform(X_train)
-        X_test_scaled = scaler.transform(X_test)
+        #scaler = StandardScaler()
+        #X_train_scaled = scaler.fit_transform(X_train)
+        #X_test_scaled = scaler.transform(X_test)
 
         # Apply PCA (Principal Component Analysis) if needed
         # pca = PCA(n_components=2)  # You can specify the number of components as needed
         # X_train_pca = pca.fit_transform(X_train_scaled)
         # X_test_pca = pca.transform(X_test_scaled)
+        train, test = train_test_split(data, test_size=0.25, random_state=42)
+        X_train=train.drop(target_variable, axis=1)
+        y_train=train[target_variable]
+
+        X_test=test.drop(target_variable, axis=1)
+        y_test=test[target_variable]
+
+        scaler = StandardScaler()
+        X_train_scaled = scaler.fit_transform(X_train)
+        X_test_scaled = scaler.transform(X_test)
 
         # Save the transformed data
-        train_data = pd.DataFrame(X_train_scaled, columns=X.columns)
-        test_data = pd.DataFrame(X_test_scaled, columns=X.columns)
+        train_data = pd.DataFrame(X_train_scaled, columns=X_train.columns)
+        test_data = pd.DataFrame(X_test_scaled, columns=X_test.columns)
 
+        # Add the target variable to the train and test datasets
         train_data[target_variable] = y_train
         test_data[target_variable] = y_test
 
-        train_data.to_csv(os.path.join(self.config.root_dir, "train.csv"), index=False)
-        test_data.to_csv(os.path.join(self.config.root_dir, "test.csv"), index=False)
+        # Save the train and test datasets as CSV files
+        train_data.to_csv(os.path.join(self.config.root_dir, "train.csv"),index = False)
+        test_data.to_csv(os.path.join(self.config.root_dir, "test.csv"),index = False)
+
+        # Save the transformed data
+        #train_data = pd.DataFrame(X_train_scaled, columns=X.columns)
+        #test_data = pd.DataFrame(X_test_scaled, columns=X.columns)
+        # Add the target variable to the train and test datasets
+
+        #train_data[target_variable] = y_train
+        #test_data[target_variable] = y_test
+        # Save the train and test datasets as CSV files
+
+        #train_data.to_csv(os.path.join(self.config.root_dir, "train.csv"), index=False)
+        #test_data.to_csv(os.path.join(self.config.root_dir, "test.csv"), index=False)
 
         logger.info("Transformed data with StandardScaler and saved to CSV files with randomization")
         logger.info(train_data.shape)
