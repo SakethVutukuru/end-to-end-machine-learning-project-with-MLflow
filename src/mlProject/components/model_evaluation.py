@@ -22,10 +22,7 @@ class ModelEvaluation:
         r2 = r2_score(actual, pred)
         return rmse, mae, r2
     
-
-
     def log_into_mlflow(self):
-
         test_data = pd.read_csv(self.config.test_data_path)
         model = joblib.load(self.config.model_path)
 
@@ -56,11 +53,6 @@ class ModelEvaluation:
 
             # Model registry does not work with file store
             if tracking_url_type_store != "file":
-
-                # Register the model
-                # There are other ways to use the Model Registry, which depends on the use case,
-                # please refer to the doc for more information:
-                # https://mlflow.org/docs/latest/model-registry.html#api-workflow
                 mlflow.sklearn.log_model(model, "model", registered_model_name="ElasticnetModel")
             else:
                 mlflow.sklearn.log_model(model, "model")

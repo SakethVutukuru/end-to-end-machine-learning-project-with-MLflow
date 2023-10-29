@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/chaky/Desktop/data%20science/projects/end-to-end-machine-learning-project-with-MLflow/mlruns/0/1781bbd877ae4c2dbdb35e85f8aa0754/artifacts
+end_time: 1698530683054
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 1781bbd877ae4c2dbdb35e85f8aa0754
+run_name: judicious-newt-645
+run_uuid: 1781bbd877ae4c2dbdb35e85f8aa0754
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1698530681251
+status: 3
+tags: []
+user_id: chaky

@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/chaky/Desktop/data%20science/projects/end-to-end-machine-learning-project-with-MLflow/mlruns/0/16915b6318b949e4a56ca9e5c174893e/artifacts
+end_time: 1698532775108
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 16915b6318b949e4a56ca9e5c174893e
+run_name: zealous-smelt-644
+run_uuid: 16915b6318b949e4a56ca9e5c174893e
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1698532773163
+status: 3
+tags: []
+user_id: chaky
