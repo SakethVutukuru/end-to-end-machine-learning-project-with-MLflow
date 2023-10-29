@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/chaky/Desktop/data%20science/projects/end-to-end-machine-learning-project-with-MLflow/mlruns/0/63a8cf54548d411a8479429f3c220d7e/artifacts
+end_time: 1698590385697
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 63a8cf54548d411a8479429f3c220d7e
+run_name: nimble-shrike-105
+run_uuid: 63a8cf54548d411a8479429f3c220d7e
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1698590383870
+status: 3
+tags: []
+user_id: chaky
